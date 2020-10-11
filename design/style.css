@@ -1,0 +1,400 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.col-1 {
+    width: 8.333%;
+}
+
+.col-2 {
+    width: 16.666%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.333%
+}
+
+.col-5 {
+    width: 41.0666%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.3333%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.333%;
+}
+
+.col-11 {
+    width: 91.666%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.offset-1 {
+    /*marge d'une certaine taille  (en colonne)*/
+    margin-left: 8.333%;
+}
+
+.offset-2 {
+    margin-left: 16.666%;
+}
+
+.offset-3 {
+    margin-left: 25%;
+}
+
+.offset-4 {
+    margin-left: 33.333%
+}
+
+.offset-5 {
+    margin-left: 41.0666%;
+}
+
+.offset-6 {
+    margin-left: 50%;
+}
+
+.offset-7 {
+    margin-left: 58.3333%;
+}
+
+.offset-8 {
+    margin-left: 66.66%;
+}
+
+.offset-9 {
+    margin-left: 75%;
+}
+
+.offset-10 {
+    margin-left: 83.666%;
+}
+
+.offset-11 {
+    margin-left: 91.666%;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    float: left;
+    padding: 0 10px;
+    display: block;
+}
+
+/*Pour calculer la width d'une colone : 1, 2, 3.../12x100 */
+
+/*Une balise lambda sera moins prioritaire par rapport
+a une classe, donc préciser la commande CSS, l'ID sera par
+contre prioritaire par rapport à la classe :
+			ID > Classe > Balise */
+.row {
+    clear: both;
+}
+
+.row::before {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.row::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+/*=================== Fin des classes usuelle =======================*/
+
+@keyframes slideFromLeft{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    80%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+}
+
+body{
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+h1, h2, p{
+    font-family: 'Kumbh Sans',sans-serif;
+}
+h1{
+    padding-bottom: 40px;
+    font-size: 45px;
+}
+h2{
+    padding: 25px 0;
+    font-size: 20px;
+    font-weight: 400;
+    transition: ease .2s;
+    position: relative;
+    color: hsl(238, 29%, 16%);
+    /*background-image: url(../images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: right;*/
+}
+h2::after{
+    content: url(../images/icon-arrow-down.svg);
+    position: absolute;
+    right: 0;
+    top: 20px;
+    transition: .2s;
+}
+/*p{
+    
+    padding-top: 0;
+    height: 0;
+    opacity: 0;
+}
+.active p{
+    padding-top: 20px;
+    height: auto;
+    opacity: 1;
+}
+.active p{
+    padding-top: 20px;
+   opacity: 1;
+   height: auto;
+   animation: slideFromLeft 0.2s ease;
+   transform: translateX(0);
+}
+.active h2{
+    font-weight: 700;
+}
+*/
+.grand-parent{
+    position: relative;
+    margin: auto;
+}
+.container{
+    min-width: 1440px;
+    margin: auto;
+    background-color: #ffffff;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-position-x: -790px;
+    background-position-y: -340px;
+    background-size: 1280px;
+    background-repeat: no-repeat;
+    min-height: 700px;
+    float: none;
+    clear: both;;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.3);    
+
+} 
+.all-dropdown{
+    padding: 10px 160px 10px 20px;
+    width: 50%;
+    overflow: hidden;
+}
+
+.dropdown {
+    cursor: pointer;
+    border-bottom: solid 1px hsl(240, 5%, 91%)  ;
+}
+.dropdown:hover h2{
+    color: hsl(14, 88%, 65%);
+}
+.img{
+    width: 50%;
+    position: relative;
+}
+.images{
+    padding-top: 40px;
+    overflow: hidden;
+}
+.images img.woman{
+    height: 470px;
+    z-index: 3;
+    position: relative;
+    margin-left: -120px;
+}
+.images img.background{
+    position: absolute;
+    left: -55%;
+    top: -38%;
+    z-index: 1;
+    height: 1240px;
+}
+.box{
+    position: absolute;
+    top: 45%;
+    z-index: 9;
+    left: -105px;
+    height: 210px;
+}
+
+.accordionItem.open h2{
+    font-weight: 700;
+}
+.accordionItem.open h2::after {
+    transform: rotate(180deg);
+}
+
+
+/*CSS By https://codepen.io/sureshrkm - CodePen*/
+
+.close .accordionItemContent {
+    height: 0px;
+    transition: height 1s ease-out;
+    -webkit-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    float: left;
+    display: block;
+
+
+}
+
+.open .accordionItemContent {
+    transform: translateX(-100%);
+    color: hsl(237, 12%, 33%);
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.5em;
+    opacity: 1;
+    padding: 0 0 10px 0;
+    background-color: #fff;
+    width: 100%;
+    margin: 0;
+    display: block;
+    -webkit-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: top;
+    -o-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -o-transition: -o-transform 0.4s ease;
+    -ms-transition: -ms-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 375px){
+    .container{
+        min-width: auto;
+        display: block;
+        margin: 0 20px;
+        min-height: 550px;
+        background-image: url(../images/bg-pattern-mobile.svg);
+        background-position: top;
+        background-size: auto;
+    }
+    .container > div{
+        width: 100%;
+    }
+    .all-dropdown{
+        padding: 20px;  
+    }
+    .all-dropdown h1{
+        text-align: center;
+        font-size: 30px;
+        padding: 40px 0 10px 0;
+    }
+    .dropdown{
+        padding: 0;
+    }
+    .dropdown h2{
+        font-size: 14px;
+    }
+    .dropdown:hover h2{
+        color: hsl(238, 29%, 16%);
+    }
+    .open .accordionItemContent{
+        font-size: 12px;
+        padding: 0 0 20px 0;
+    }
+    .images{
+        text-align: center;
+        padding-top: 0;
+        margin-top: -108px;
+
+    }
+    .images img.woman{
+        height: 180px;
+        margin: 0;
+    }
+    .box{
+        left: 37px; 
+        top: 63px;
+        height: 100px;   
+    }
+}

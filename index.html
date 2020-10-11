@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="design/style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; color: #ffffff;}
+    .attribution a { color: white; }
+  </style>
+</head>
+<body>
+  <div class="container row">
+    <div class="img">
+      <img class="box" src="images/illustration-box-desktop.svg" alt="">
+      <div class="images">
+        <img class="woman" src="images/illustration-woman-online-desktop.svg" 
+          alt="">
+        <!--<img class="background"
+          src="images/bg-pattern-desktop.svg"
+          alt="">-->
+      </div>
+    </div>
+    <div class="all-dropdown accordionWrapper">
+      <h1>FAQ</h1>
+        <div class="dropdown accordionItem close">
+          <h2 class="accordionItemHeading">How many team members can I invite?</h2>
+          <p class="accordionItemContent"> You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+      </div>
+
+      <div class="dropdown accordionItem close">
+        <h2 class="accordionItemHeading">What is the maximum file upload size?</h2>
+        <p class="accordionItemContent">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+      </div>
+
+      <div class="dropdown accordionItem close">
+        <h2 class="accordionItemHeading">How do I reset my password?</h2>
+        <p class="accordionItemContent">Click “Forgot password” from the login page or “Change password” from your profile page. <br>
+        A reset link will be emailed to you.</p>
+      </div>
+
+      <div class="dropdown accordionItem close">
+        <h2 class="accordionItemHeading">Can I cancel my subscription?</h2>
+        <p class="accordionItemContent">Yes! Send us a message and we’ll process your request no questions asked.</p>
+      </div>
+      <div class="dropdown accordionItem close">
+        <h2 class="accordionItemHeading">Do you provide additional support?</h2>
+        <p class="accordionItemContent">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+      </div>
+    </div>
+  </div>
+  <div class="attribution col-12">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a target="_blank" href="https://www.frontendmentor.io/profile/brice06110">Brice</a>.
+  </div>
+  
+  <!--<script>
+    var acc = document.getElementsByClassName("dropdown");
+    var i;
+    for (i = 0; i < acc.length; i++) { acc[i].addEventListener("click", function(){     this.classList.toggle("active");
+      }); 
+    }
+  </script>-->
+
+  <!-- Script by https://codepen.io/sureshrkm - CodePen-->
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionItemHeading');
+    		for (i = 0; i < accHD.length; i++) { accHD[i].addEventListener('click', toggleItem, false); } function
+    		  toggleItem() { var itemClass=this.parentNode.className; for (i=0; i < accItem.length; i++) {
+    		  accItem[i].className='dropdown accordionItem close' ; } if (itemClass=='dropdown accordionItem close' ) {
+    		  this.parentNode.className='dropdown accordionItem open' ; } }
+  </script>
+</body>
+</html>
